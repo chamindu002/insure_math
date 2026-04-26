@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsureMatch | AI-Powered Insurance Recommendation Research</title>
+    <meta
+      name="description"
+      content="InsureMatch is a final-year research project focused on recommending suitable insurance policies to Sri Lankan users using AI, NLP, and machine learning."
+    />
+    <meta
+      property="og:title"
+      content="InsureMatch | AI-Powered Insurance Recommendation Research"
+    />
+    <meta
+      property="og:description"
+      content="Academic research website for InsureMatch, an intelligent system that recommends insurance policies based on user profiles and needs using AI and machine learning."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="InsureMatch home">
+          <span class="brand-mark">IM</span>
+          <span class="brand-copy">
+            <strong>InsureMatch</strong>
+            <span>Research Project Website</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#domain">Domain</a>
+          <a href="#milestones">Milestones</a>
+          <a href="#documents">Documents</a>
+          <a href="#presentations">Presentations</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ===== HERO ===== -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">AI &amp; Machine Learning · Insurance Technology</p>
+            <h1>InsureMatch</h1>
+            <p class="hero-subtitle">
+              Intelligent Insurance Policy Recommendation System for Sri Lankan Users
+            </p>
+            <p class="hero-text">
+              InsureMatch is a final-year research project that leverages artificial intelligence,
+              natural language processing, and machine learning to match Sri Lankan users with the
+              most suitable insurance policies based on their personal profiles, financial capacity,
+              risk preferences, and life events — making insurance more accessible and understandable
+              for everyone.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#domain">View Domain</a>
+              <a class="button button-secondary" href="#documents">See Documents</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-orbit orbit-large"></div>
+            <div class="hero-orbit orbit-medium"></div>
+            <div class="hero-orbit orbit-small"></div>
+            <div class="hero-panel">
+              <p>Research Focus</p>
+              <strong>4 Research Components</strong>
+              <span>AI-driven policy matching · NLP-based query understanding · Risk profiling · Personalised recommendations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DOMAIN ===== -->
+      <section class="section section-tinted" id="domain">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Domain</p>
+            <h2>Project Scope</h2>
+            <p>Comprehensive overview of our research approach and problem space.</p>
+          </div>
+
+          <div class="domain-grid">
+            <article class="info-card">
+              <h3>Literature Survey</h3>
+              <p class="justified-text">
+                Insurance selection in Sri Lanka remains largely agent-driven and manually intensive.
+                Existing digital platforms lack personalisation and do not consider individual risk
+                profiles, life events, or financial capacity. Recent advances in recommender systems,
+                natural language processing, and explainable AI present strong opportunities to
+                transform how insurance products are discovered, compared, and selected by consumers
+                and financial advisors alike.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Research Gap</h3>
+              <ul>
+                <li>No AI-powered insurance recommender tailored to the Sri Lankan market.</li>
+                <li>Existing chatbots lack domain-specific insurance knowledge.</li>
+                <li>Policy comparison tools ignore user risk profiles and life context.</li>
+                <li>Limited explainability in existing automated recommendation systems.</li>
+                <li>Lack of multilingual support for Sinhala and Tamil-speaking users.</li>
+              </ul>
+            </article>
+
+            <article class="info-card info-card-wide">
+              <h3>Research Problem</h3>
+              <p class="justified-text">
+                Sri Lankan insurance consumers face significant challenges in identifying, comparing,
+                and selecting appropriate insurance policies due to the complexity of policy terms,
+                lack of personalised guidance, limited digital tools, and an over-reliance on human
+                intermediaries — resulting in under-insurance, mismatched coverage, and poor
+                financial protection outcomes.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Main Objective</h3>
+              <p class="justified-text">
+                Develop an intelligent, AI-powered insurance policy recommendation system that
+                matches Sri Lankan users to the most suitable life, health, motor, and general
+                insurance products based on personalised profiling, NLP-driven query understanding,
+                and explainable machine learning models.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Sub Objectives</h3>
+              <ul>
+                <li>Build a user profiling module capturing demographics, risk appetite, and life events.</li>
+                <li>Develop an NLP engine to process natural language insurance queries.</li>
+                <li>Train recommendation models on Sri Lankan insurance product datasets.</li>
+                <li>Implement explainable AI output to justify recommendations.</li>
+                <li>Deliver a responsive, multilingual web interface for end users.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Methodology -->
+          <div class="methodology-shell">
+            <div class="section-heading compact">
+              <h3>Methodology</h3>
+              <p class="justified-text single-line-copy">
+                The system pipeline covers user profiling, query processing, recommendation, explanation, and feedback.
+              </p>
+            </div>
+
+            <div class="pipeline">
+              <article class="pipeline-step">
+                <span>01</span>
+                <h4>User Onboarding &amp; Profiling</h4>
+                <p>
+                  Users register and complete a structured profile including age, income, dependants,
+                  occupation, existing coverage, and risk tolerance.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>02</span>
+                <h4>NLP Query Understanding</h4>
+                <p>
+                  Natural language inputs are parsed using transformer-based NLP models to identify
+                  insurance intent, policy type preferences, and coverage requirements.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>03</span>
+                <h4>Policy Data Ingestion</h4>
+                <p>
+                  Insurance product data from major Sri Lankan insurers is ingested, cleaned, and
+                  structured into a standardised knowledge base for downstream matching.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>04</span>
+                <h4>Risk Profiling Engine</h4>
+                <p>
+                  Machine learning classifiers assess user risk profiles across life, health, and
+                  motor insurance dimensions to segment users for targeted recommendations.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>05</span>
+                <h4>Recommendation Models</h4>
+                <p>
+                  Collaborative filtering, content-based filtering, and hybrid ML models rank
+                  and recommend policies aligned with user profiles and stated preferences.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>06</span>
+                <h4>Explainability Layer</h4>
+                <p>
+                  SHAP and LIME-based explainability modules generate plain-language justifications
+                  for each recommendation, improving user trust and transparency.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>07</span>
+                <h4>Policy Comparison Module</h4>
+                <p>
+                  Users can compare up to four recommended policies side-by-side across premium,
+                  coverage, exclusions, and claim settlement ratio dimensions.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>08</span>
+                <h4>Feedback &amp; Retraining Loop</h4>
+                <p>
+                  User feedback and interaction signals are captured to continuously improve model
+                  performance and recommendation relevance over time.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>09</span>
+                <h4>Deployment &amp; Integration</h4>
+                <p>
+                  The full system is deployed as a cloud-hosted web platform with REST APIs,
+                  React frontend, and a Python/Django ML backend.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tools and Frameworks -->
+          <div class="technology-block">
+            <div class="section-heading compact">
+              <h3>Tools and Frameworks</h3>
+              <p class="justified-text single-line-copy">
+                Technologies span frontend, backend, AI/ML, NLP, database, and deployment layers.
+              </p>
+            </div>
+            <div class="tech-grid" aria-label="Technologies used">
+              <article class="tech-category">
+                <h4>Frontend</h4>
+                <div class="chip-group">
+                  <span>React</span>
+                  <span>Vite</span>
+                  <span>Tailwind CSS</span>
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>Backend</h4>
+                <div class="chip-group">
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>FastAPI</span>
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>Database &amp; Deployment</h4>
+                <div class="chip-group">
+                  <span>PostgreSQL</span>
+                  <span>Docker</span>
+                  <span>AWS</span>
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>AI &amp; Machine Learning</h4>
+                <div class="chip-group">
+                  <span>Scikit-learn</span>
+                  <span>TensorFlow</span>
+                  <span>PyTorch</span>
+                  <span>SHAP</span>
+                  <span>LIME</span>
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>NLP &amp; Text Processing</h4>
+                <div class="chip-group">
+                  <span>Hugging Face</span>
+                  <span>spaCy</span>
+                  <span>NLTK</span>
+                  <span>BERT</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RESEARCH COMPONENTS ===== -->
+      <section class="section" id="components">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Research Components</p>
+            <h2>Four Core Research Areas</h2>
+            <p class="single-line-copy">
+              Each component addresses a distinct challenge in intelligent insurance recommendation.
+            </p>
+          </div>
+
+          <div class="disease-grid">
+            <article class="disease-card">
+              <p class="disease-code">NLP</p>
+              <h3>Natural Language Processing</h3>
+              <p>
+                Processing and understanding free-text insurance queries using transformer models to
+                extract intent, policy type, and coverage preferences from user inputs.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">REC</p>
+              <h3>Recommendation Engine</h3>
+              <p>
+                Hybrid collaborative and content-based filtering models that match user profiles
+                with the most suitable life, health, motor, and general insurance products.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">XAI</p>
+              <h3>Explainable AI</h3>
+              <p>
+                SHAP and LIME-based modules that generate transparent, human-readable justifications
+                for every recommendation to build user trust and regulatory compliance.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">UPM</p>
+              <h3>User Profile Modelling</h3>
+              <p>
+                Dynamic risk profiling that captures demographic data, life events, financial capacity,
+                and insurance history to personalise recommendations over time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MILESTONES ===== -->
+      <section class="section section-tinted" id="milestones">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Milestones</p>
+            <h2>Project Assessments and Progress Tracking</h2>
+            <p>Milestone details include assessment name, date, marks allocated, and status.</p>
+          </div>
+
+          <div class="milestone-toolbar">
+            <label for="milestone-filter">Choose milestone</label>
+            <select id="milestone-filter" name="milestone-filter">
+              <option value="all">All milestones</option>
+              <option value="proposal">Project Proposal</option>
+              <option value="pp1">Progress Presentation 1</option>
+              <option value="pp2">Progress Presentation 2</option>
+              <option value="final">Final Assessment</option>
+              <option value="viva">Viva</option>
+            </select>
+          </div>
+
+          <div class="milestone-list" id="milestone-list">
+            <article class="milestone-card" data-milestone="proposal">
+              <div>
+                <p class="milestone-index">01</p>
+                <h3>Project Proposal</h3>
+                <p>Initial project pitch, research direction, and scope review.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Sep 2025</li>
+                <li><strong>Marks:</strong> 10% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="pp1">
+              <div>
+                <p class="milestone-index">02</p>
+                <h3>Progress Presentation 1</h3>
+                <p>Early research findings, literature review, and initial implementation progress.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Jan 2026</li>
+                <li><strong>Marks:</strong> 15% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="pp2">
+              <div>
+                <p class="milestone-index">03</p>
+                <h3>Progress Presentation 2</h3>
+                <p>Mid-stage model development, system integration, and results update.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Mar 2026</li>
+                <li><strong>Marks:</strong> 15% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="final">
+              <div>
+                <p class="milestone-index">04</p>
+                <h3>Final Assessment</h3>
+                <p>Complete system evaluation, research paper submission, and final reporting.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> May 2026</li>
+                <li><strong>Marks:</strong> 40% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge milestone-status">Pending</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="viva">
+              <div>
+                <p class="milestone-index">05</p>
+                <h3>Viva</h3>
+                <p>Final oral defence of the completed InsureMatch research project.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> May 2026</li>
+                <li><strong>Marks:</strong> 20% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge milestone-status">Pending</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DOCUMENTS ===== -->
+      <section class="section" id="documents">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Documents</p>
+            <h2>Project Documents</h2>
+            <p class="single-line-copy">
+              Downloadable documents and finalized research deliverables for the InsureMatch project.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Project Charter</h3>
+              <p>Initial scope, planning, and stakeholder alignment document.</p>
+              <a href="assets/Documents/Project-Charter.pdf" download="InsureMatch-Project-Charter.pdf">Download</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Proposal Document</h3>
+              <p>Research proposal containing problem context, objectives, and methodology.</p>
+              <a href="assets/Documents/Proposal-Document.pdf" download="InsureMatch-Proposal.pdf">Download</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Check List Documents</h3>
+              <p>Assessment and submission checklist documents for all milestones.</p>
+              <a href="#contact">Request Access</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Final Research Report</h3>
+              <p>Complete research report including individual component reports and findings.</p>
+              <a href="#contact">Request Access</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRESENTATIONS ===== -->
+      <section class="section section-tinted" id="presentations">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Presentations</p>
+            <h2>Slides Used Across Project Assessments</h2>
+            <p>Presentation decks for each milestone assessment of the InsureMatch project.</p>
+          </div>
+
+          <div class="card-grid compact-grid">
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Proposal Presentation</h3>
+              <p>Initial research introduction and problem framing slides.</p>
+              <a href="assets/Documents/Proposal-Presentation.pdf" download="InsureMatch-Proposal-Presentation.pdf">Download</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Progress Presentation 1</h3>
+              <p>Early-stage progress, literature insights, and system architecture overview.</p>
+              <a href="assets/Documents/InsureMatch-PP1.pdf" download="InsureMatch-PP1.pdf">Download</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Progress Presentation 2</h3>
+              <p>Mid-stage implementation, model development, and evaluation results.</p>
+              <a href="assets/Documents/InsureMatch-PP2.pdf" download="InsureMatch-PP2.pdf">Download</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Final Presentation</h3>
+              <p>Final system demonstration, research outcomes, and future directions.</p>
+              <a href="#contact">Request Access</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT US ===== -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">About Us</p>
+            <h2>The Team Behind InsureMatch</h2>
+            <p class="single-line-copy">
+              The InsureMatch project is built by a student research team with academic and external supervision.
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <!-- Student 1 -->
+            <article class="team-card">
+              <div class="team-photo-placeholder" aria-label="Team member photo placeholder"></div>
+              <p class="team-role">NLP Component</p>
+              <h3>Member Name Here</h3>
+              <p>
+                Responsible for natural language processing engine and insurance query understanding.<br />
+                <span class="team-email">Email: member1@gmail.com</span>
+              </p>
+            </article>
+            <!-- Student 2 -->
+            <article class="team-card">
+              <div class="team-photo-placeholder" aria-label="Team member photo placeholder"></div>
+              <p class="team-role">Recommendation Engine</p>
+              <h3>Member Name Here</h3>
+              <p>
+                Responsible for building the hybrid insurance policy recommendation models.<br />
+                <span class="team-email">Email: member2@gmail.com</span>
+              </p>
+            </article>
+            <!-- Student 3 -->
+            <article class="team-card">
+              <div class="team-photo-placeholder" aria-label="Team member photo placeholder"></div>
+              <p class="team-role">Explainable AI</p>
+              <h3>Member Name Here</h3>
+              <p>
+                Responsible for SHAP/LIME-based explainability and transparent output generation.<br />
+                <span class="team-email">Email: member3@gmail.com</span>
+              </p>
+            </article>
+            <!-- Student 4 -->
+            <article class="team-card">
+              <div class="team-photo-placeholder" aria-label="Team member photo placeholder"></div>
+              <p class="team-role">User Profile Modelling</p>
+              <h3>Member Name Here</h3>
+              <p>
+                Responsible for dynamic user profiling, risk classification, and feedback loops.<br />
+                <span class="team-email">Email: member4@gmail.com</span>
+              </p>
+            </article>
+            <!-- Supervisor -->
+            <article class="team-card">
+              <p class="team-role">Supervisor</p>
+              <h3>Supervisor Name</h3>
+              <p class="team-meta">Senior Lecturer</p>
+              <p>
+                Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, Sri Lanka<br />
+                <span class="team-email">Email: supervisor@sliit.lk</span>
+              </p>
+            </article>
+            <!-- Co-Supervisor -->
+            <article class="team-card">
+              <p class="team-role">Co-Supervisor</p>
+              <h3>Co-Supervisor Name</h3>
+              <p class="team-meta">Lecturer</p>
+              <p>
+                Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, Sri Lanka<br />
+                <span class="team-email">Email: cosupervisor@sliit.lk</span>
+              </p>
+            </article>
+            <!-- External Supervisor -->
+            <article class="team-card">
+              <p class="team-role">External Supervisor</p>
+              <h3>External Supervisor Name</h3>
+              <p class="team-meta">Industry Expert · Insurance Domain</p>
+              <p>
+                External supervisor providing industry expertise and insurance domain guidance for the InsureMatch research project.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section section-tinted" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="section-heading compact left-aligned">
+              <p class="section-tag">Contact Us</p>
+              <h2>Connect with the Project Team</h2>
+              <p>Contact details for the InsureMatch project team and academic supervision.</p>
+            </div>
+
+            <div class="contact-panel">
+              <h3>Get in Touch</h3>
+              <p>
+                If you have any questions about our research project or wish to learn more,
+                feel free to contact us.
+              </p>
+              <p class="contact-detail"><strong>Email:</strong> insurematch.research@gmail.com</p>
+              <p class="contact-detail"><strong>Phone:</strong> +94 XX XXX XXXX</p>
+              <p class="contact-address-block">
+                <strong>Address:</strong><br />
+                Sri Lanka Institute of Information Technology,<br />
+                Malabe,<br />
+                Sri Lanka.
+              </p>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            data-endpoint="https://formsubmit.co/ajax/insurematch.research@gmail.com"
+            novalidate
+          >
+            <input type="hidden" name="_subject" value="InsureMatch Website Contact Form Submission" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <label for="name">Name</label>
+            <input id="name" name="Name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="Email Address" type="email" required />
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="Subject" type="text" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="8" required></textarea>
+
+            <button class="button button-primary" id="send-message-button" type="button">
+              Send Message
+            </button>
+            <p class="form-note" id="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <p>InsureMatch</p>
+        <p>&copy; <span id="year"></span> InsureMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
