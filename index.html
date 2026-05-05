@@ -63,10 +63,9 @@
           </p>
           <p class="hero-text">
             InsureMatch is a final-year research project that leverages artificial intelligence,
-            natural language processing, and machine learning to match Sri Lankan users with the
-            most suitable insurance policies based on their personal profiles, financial capacity,
-            risk preferences, and life events — making insurance more accessible and understandable
-            for everyone.
+            natural language processing, and machine learning to automate insurance claims processing,
+            risk scoring, sanctioned entity detection, and policy recommendation — making insurance
+            operations more efficient and accessible for Union Assurance PLC and its customers.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#domain">View Domain</a>
@@ -90,8 +89,7 @@
           <div class="hero-panel">
             <p>Research Focus</p>
             <strong>4 Research Components</strong>
-            <span>AI-driven policy matching · NLP-based query understanding · Risk profiling · Personalised
-              recommendations</span>
+            <span>OPD claims automation · Risk scoring &amp; policy optimisation · Sanctioned entity detection · AI policy recommendation</span>
           </div>
         </div>
       </div>
@@ -110,55 +108,56 @@
           <article class="info-card">
             <h3>Literature Survey</h3>
             <p class="justified-text">
-              Insurance selection in Sri Lanka remains largely agent-driven and manually intensive.
-              Existing digital platforms lack personalisation and do not consider individual risk
-              profiles, life events, or financial capacity. Recent advances in recommender systems,
-              natural language processing, and explainable AI present strong opportunities to
-              transform how insurance products are discovered, compared, and selected by consumers
-              and financial advisors alike.
+              Life insurance operations in Sri Lanka remain largely manual and agent-driven, with
+              claims processing, risk assessment, and compliance checks requiring significant human
+              effort. Recent advances in large language models, reinforcement learning, multimodal
+              biometrics, and retrieval-augmented generation present compelling opportunities to
+              automate OPD claims adjudication, adaptive risk scoring, sanctioned entity screening,
+              and personalised policy recommendation at scale.
             </p>
           </article>
 
           <article class="info-card">
             <h3>Research Gap</h3>
             <ul>
-              <li>No AI-powered insurance recommender tailored to the Sri Lankan market.</li>
-              <li>Existing chatbots lack domain-specific insurance knowledge.</li>
-              <li>Policy comparison tools ignore user risk profiles and life context.</li>
-              <li>Limited explainability in existing automated recommendation systems.</li>
-              <li>Lack of multilingual support for Sinhala and Tamil-speaking users.</li>
+              <li>No AI-driven OPD claims automation or intelligent email triage exists for Sri Lankan insurers.</li>
+              <li>Risk scoring relies on static rule-based weights that cannot adapt to individual customer profiles.</li>
+              <li>Sanctioned entity detection lacks multimodal biometric and transliteration-aware name matching.</li>
+              <li>Policy recommendation tools offer no explainability or document-grounded conversational follow-up.</li>
+              <li>Existing platforms fail to identify and close coverage gaps via personalised rider suggestions.</li>
             </ul>
           </article>
 
           <article class="info-card info-card-wide">
             <h3>Research Problem</h3>
             <p class="justified-text">
-              Sri Lankan insurance consumers face significant challenges in identifying, comparing,
-              and selecting appropriate insurance policies due to the complexity of policy terms,
-              lack of personalised guidance, limited digital tools, and an over-reliance on human
-              intermediaries — resulting in under-insurance, mismatched coverage, and poor
-              financial protection outcomes.
+              Union Assurance PLC faces operational challenges across the full insurance lifecycle —
+              from slow, manual OPD claims adjudication and reactive email handling, to static risk
+              scoring that ignores individual customer context, inadequate sanctions screening with
+              no biometric layer, and policy recommendations that lack transparency and post-sale
+              conversational support — resulting in processing delays, compliance exposure, and
+              poor customer experience.
             </p>
           </article>
 
           <article class="info-card">
             <h3>Main Objective</h3>
             <p class="justified-text">
-              Develop an intelligent, AI-powered insurance policy recommendation system that
-              matches Sri Lankan users to the most suitable life, health, motor, and general
-              insurance products based on personalised profiling, NLP-driven query understanding,
-              and explainable machine learning models.
+              Develop a unified AI-powered insurance automation system combining GenAI-driven
+              claims processing and email classification, reinforcement learning-based risk scoring
+              and policy optimisation, multimodal sanctioned entity detection, and an explainable
+              policy recommendation engine with a scope-locked conversational AI agent.
             </p>
           </article>
 
           <article class="info-card">
             <h3>Sub Objectives</h3>
             <ul>
-              <li>Build a user profiling module capturing demographics, risk appetite, and life events.</li>
-              <li>Develop an NLP engine to process natural language insurance queries.</li>
-              <li>Train recommendation models on Sri Lankan insurance product datasets.</li>
-              <li>Implement explainable AI output to justify recommendations.</li>
-              <li>Deliver a responsive, multilingual web interface for end users.</li>
+              <li>Automate OPD claims adjudication using OCR, fine-tuned LLMs, and XGBoost confidence scoring.</li>
+              <li>Implement a PPO reinforcement learning agent for adaptive per-customer risk weight adjustment.</li>
+              <li>Build a dual-track face and name sanctions screening pipeline using EfficientNet-B0 and FAISS.</li>
+              <li>Deliver explainable policy recommendations via XGBoost, SHAP, RAG, and a scope-locked chat agent.</li>
+              <li>Integrate all components into a web platform backed by FastAPI, Supabase, and ChromaDB.</li>
             </ul>
           </article>
         </div>
@@ -168,81 +167,81 @@
           <div class="section-heading compact">
             <h3>Methodology</h3>
             <p class="justified-text single-line-copy">
-              The system pipeline covers user profiling, query processing, recommendation, explanation, and feedback.
+              The system pipeline spans four parallel research components covering data ingestion, AI processing, compliance screening, and personalised recommendation.
             </p>
           </div>
 
           <div class="pipeline">
             <article class="pipeline-step">
               <span>01</span>
-              <h4>User Onboarding &amp; Profiling</h4>
+              <h4>PDF Upload &amp; OCR Extraction</h4>
               <p>
-                Users register and complete a structured profile including age, income, dependants,
-                occupation, existing coverage, and risk tolerance.
+                Customer uploads a medical bill PDF. OCR.space API runs client-side to extract
+                raw text, with PyPDF2 as server-side fallback for text-based documents.
               </p>
             </article>
             <article class="pipeline-step">
               <span>02</span>
-              <h4>NLP Query Understanding</h4>
+              <h4>LLM Field Extraction</h4>
               <p>
-                Natural language inputs are parsed using transformer-based NLP models to identify
-                insurance intent, policy type preferences, and coverage requirements.
+                Fine-tuned Llama 3.2-1B with LoRA adapter extracts 13 structured fields from
+                OCR text via HuggingFace Spaces Gradio API.
               </p>
             </article>
             <article class="pipeline-step">
               <span>03</span>
-              <h4>Policy Data Ingestion</h4>
+              <h4>Policy Verification</h4>
               <p>
-                Insurance product data from major Sri Lankan insurers is ingested, cleaned, and
-                structured into a standardised knowledge base for downstream matching.
+                Six sequential SQLite checks confirm policy existence, active status, OPD coverage
+                limit, payment history, and waiting period compliance.
               </p>
             </article>
             <article class="pipeline-step">
               <span>04</span>
-              <h4>Risk Profiling Engine</h4>
+              <h4>Risk Scoring &amp; Weight Adjustment</h4>
               <p>
-                Machine learning classifiers assess user risk profiles across life, health, and
-                motor insurance dimensions to segment users for targeted recommendations.
+                Rule-based weighted formula produces a 0–100 risk score. A PPO reinforcement
+                learning agent proposes per-customer weight adjustments reviewed by a risk officer.
               </p>
             </article>
             <article class="pipeline-step">
               <span>05</span>
-              <h4>Recommendation Models</h4>
+              <h4>Policy Optimisation</h4>
               <p>
-                Collaborative filtering, content-based filtering, and hybrid ML models rank
-                and recommend policies aligned with user profiles and stated preferences.
+                XGBoost predicts customer expense; SHAP explains top-5 drivers; KMeans segments
+                customers; RAG assigns riders; PPO proposes policy-level optimisation actions.
               </p>
             </article>
             <article class="pipeline-step">
               <span>06</span>
-              <h4>Explainability Layer</h4>
+              <h4>Sanctions Screening</h4>
               <p>
-                SHAP and LIME-based explainability modules generate plain-language justifications
-                for each recommendation, improving user trust and transparency.
+                Parallel dual-track pipeline runs TF-IDF + FAISS name matching and EfficientNet-B0
+                face embedding against a prototype bank, fusing scores for a compliance decision.
               </p>
             </article>
             <article class="pipeline-step">
               <span>07</span>
-              <h4>Policy Comparison Module</h4>
+              <h4>Policy Suitability Scoring</h4>
               <p>
-                Users can compare up to four recommended policies side-by-side across premium,
-                coverage, exclusions, and claim settlement ratio dimensions.
+                XGBoost regressor scores every indexed policy against a 31-dimensional user feature
+                vector and ranks top-K policies for recommendation.
               </p>
             </article>
             <article class="pipeline-step">
               <span>08</span>
-              <h4>Feedback &amp; Retraining Loop</h4>
+              <h4>Explainability &amp; Rider Gap Analysis</h4>
               <p>
-                User feedback and interaction signals are captured to continuously improve model
-                performance and recommendation relevance over time.
+                SHAP TreeExplainer provides per-feature attribution; a gap analyser identifies
+                coverage shortfalls and scores top-3 riders per recommended policy.
               </p>
             </article>
             <article class="pipeline-step">
               <span>09</span>
-              <h4>Deployment &amp; Integration</h4>
+              <h4>RAG Narrative &amp; Conversational Agent</h4>
               <p>
-                The full system is deployed as a cloud-hosted web platform with REST APIs,
-                React frontend, and a Python/Django ML backend.
+                ChromaDB MMR retrieval feeds Groq LLaMA 3.3 70B for policy narratives. A
+                scope-locked chat agent handles post-recommendation Q&amp;A with full Supabase session persistence.
               </p>
             </article>
           </div>
@@ -259,7 +258,7 @@
               </p>
             </div>
             <div class="tech-stack-count">
-              <strong>15+</strong>
+              <strong>20+</strong>
               <span>Technologies</span>
             </div>
           </div>
@@ -284,15 +283,15 @@
                   </div>
                   <div>
                     <p class="tpc-category">UI / UX Layer</p>
-                    <h4 class="tpc-title">Frontend Development</h4>
+                    <h4 class="tpc-title">Frontend &amp; Prototyping</h4>
                   </div>
                 </div>
-                <p class="tpc-desc">Component-based user interface built with React, bundled via Vite for fast build
-                  performance and Tailwind CSS for utility-first styling.</p>
+                <p class="tpc-desc">React.js for customer and company dashboards, Streamlit for rapid ML prototyping, and Flask Jinja2 templates for the insurance claims portal hosted on PythonAnywhere.</p>
                 <div class="tpc-tags">
-                  <span class="tpc-tag">React 18</span>
-                  <span class="tpc-tag">Vite</span>
-                  <span class="tpc-tag">Tailwind CSS</span>
+                  <span class="tpc-tag">React.js</span>
+                  <span class="tpc-tag">Streamlit</span>
+                  <span class="tpc-tag">Flask/Jinja2</span>
+                  <span class="tpc-tag">PythonAnywhere</span>
                 </div>
               </div>
             </article>
@@ -315,15 +314,16 @@
                   </div>
                   <div>
                     <p class="tpc-category">API / Server Layer</p>
-                    <h4 class="tpc-title">Backend Development</h4>
+                    <h4 class="tpc-title">Backend &amp; Integrations</h4>
                   </div>
                 </div>
-                <p class="tpc-desc">RESTful API services built with Django for ORM and admin, and FastAPI for
-                  high-performance ML inference endpoints with async support.</p>
+                <p class="tpc-desc">FastAPI (async, Pydantic v2 validation, auto OpenAPI docs) for the recommendation engine; Flask for the claims portal; Gmail API for email classification; Supabase Postgres for auth and persistence.</p>
                 <div class="tpc-tags">
-                  <span class="tpc-tag">Python 3.11</span>
-                  <span class="tpc-tag">Django 5</span>
                   <span class="tpc-tag">FastAPI</span>
+                  <span class="tpc-tag">Flask</span>
+                  <span class="tpc-tag">Gmail API</span>
+                  <span class="tpc-tag">Supabase</span>
+                  <span class="tpc-tag">Pydantic v2</span>
                 </div>
               </div>
             </article>
@@ -346,19 +346,18 @@
                     <h4 class="tpc-title">AI &amp; Machine Learning</h4>
                   </div>
                 </div>
-                <p class="tpc-desc">Supervised and deep learning models for policy recommendation and risk prediction,
-                  with SHAP and LIME for model explainability output.</p>
+                <p class="tpc-desc">XGBoost for claims confidence scoring, expense prediction, and policy suitability ranking; SHAP for per-feature explainability; PPO via Stable-Baselines3 for adaptive risk weight adjustment and policy optimisation; KMeans for customer segmentation.</p>
                 <div class="tpc-tags">
-                  <span class="tpc-tag">Scikit-learn</span>
-                  <span class="tpc-tag">TensorFlow</span>
-                  <span class="tpc-tag">PyTorch</span>
+                  <span class="tpc-tag">XGBoost</span>
                   <span class="tpc-tag">SHAP</span>
-                  <span class="tpc-tag">LIME</span>
+                  <span class="tpc-tag">PPO / Stable-Baselines3</span>
+                  <span class="tpc-tag">KMeans</span>
+                  <span class="tpc-tag">Scikit-learn</span>
                 </div>
               </div>
             </article>
 
-            <!-- 04 · NLP -->
+            <!-- 04 · NLP & Vision -->
             <article class="tech-pro-card">
               <div class="tpc-number">04</div>
               <div class="tpc-body">
@@ -373,17 +372,18 @@
                     </svg>
                   </div>
                   <div>
-                    <p class="tpc-category">Language Layer</p>
-                    <h4 class="tpc-title">NLP &amp; Text Processing</h4>
+                    <p class="tpc-category">Language &amp; Vision Layer</p>
+                    <h4 class="tpc-title">NLP, OCR &amp; Computer Vision</h4>
                   </div>
                 </div>
-                <p class="tpc-desc">Transformer-based language models for insurance query understanding, intent
-                  classification, and multilingual Sinhala/Tamil/English processing.</p>
+                <p class="tpc-desc">Llama 3.2-1B (LoRA fine-tuned) for structured field extraction; BERT fine-tuned for email priority classification; OCR.space for browser-side OCR; EfficientNet-B0 for 512-d face embeddings; TF-IDF char n-gram + Siamese model for transliteration-robust name matching; Groq LLaMA 3.3 70B for RAG narrative generation.</p>
                 <div class="tpc-tags">
-                  <span class="tpc-tag">Hugging Face</span>
-                  <span class="tpc-tag">spaCy</span>
-                  <span class="tpc-tag">NLTK</span>
+                  <span class="tpc-tag">Llama 3.2-1B + LoRA</span>
                   <span class="tpc-tag">BERT</span>
+                  <span class="tpc-tag">OCR.space</span>
+                  <span class="tpc-tag">EfficientNet-B0</span>
+                  <span class="tpc-tag">Groq LLaMA 3.3 70B</span>
+                  <span class="tpc-tag">HuggingFace Spaces</span>
                 </div>
               </div>
             </article>
@@ -404,17 +404,18 @@
                   </div>
                   <div>
                     <p class="tpc-category">Infrastructure Layer</p>
-                    <h4 class="tpc-title">Database &amp; Cloud Deployment</h4>
+                    <h4 class="tpc-title">Databases, Vector Stores &amp; DevOps</h4>
                   </div>
                 </div>
-                <p class="tpc-desc">PostgreSQL as the primary relational store for user profiles and policy data; Docker
-                  containers orchestrate microservices and AWS provides scalable cloud hosting.</p>
+                <p class="tpc-desc">SQLite for the claims portal; Supabase Postgres for auth, profiles, and chat history; ChromaDB (LangChain, all-MiniLM-L6-v2 embeddings, MMR retrieval) as the RAG vector store; FAISS for ANN sanctions name search; PyTorch + Google Colab for model training; GitHub for version control.</p>
                 <div class="tpc-tags">
-                  <span class="tpc-tag">PostgreSQL</span>
-                  <span class="tpc-tag">Docker</span>
-                  <span class="tpc-tag">AWS EC2</span>
-                  <span class="tpc-tag">S3 Storage</span>
-                  <span class="tpc-tag">REST API</span>
+                  <span class="tpc-tag">SQLite</span>
+                  <span class="tpc-tag">Supabase Postgres</span>
+                  <span class="tpc-tag">ChromaDB</span>
+                  <span class="tpc-tag">FAISS</span>
+                  <span class="tpc-tag">LangChain</span>
+                  <span class="tpc-tag">PyTorch</span>
+                  <span class="tpc-tag">GitHub</span>
                 </div>
               </div>
             </article>
@@ -425,7 +426,7 @@
           <div class="tech-stat-bar">
             <div class="tsb-item"><strong>5</strong><span>Tech Layers</span></div>
             <div class="tsb-divider"></div>
-            <div class="tsb-item"><strong>15+</strong><span>Tools &amp; Libraries</span></div>
+            <div class="tsb-item"><strong>20+</strong><span>Tools &amp; Libraries</span></div>
             <div class="tsb-divider"></div>
             <div class="tsb-item"><strong>Cloud</strong><span>Deployment Target</span></div>
             <div class="tsb-divider"></div>
@@ -444,7 +445,7 @@
           <p class="section-tag">Research Components</p>
           <h2>Four Core Research Areas</h2>
           <p class="single-line-copy">
-            Each component addresses a distinct challenge in intelligent insurance recommendation.
+            Each component addresses a distinct challenge in intelligent insurance automation.
           </p>
         </div>
 
@@ -453,32 +454,40 @@
             <p class="disease-code">GenAI</p>
             <h3>GenAI-Powered Claims Automation</h3>
             <p>
-              Intelligent communication and claims automation using Generative AI to streamline
-              insurance workflows, reduce processing time, and improve customer experience.
+              Automates OPD claims processing using OCR.space for document digitisation, a fine-tuned
+              Llama 3.2-1B with LoRA for structured field extraction from medical bills, six-point
+              SQLite policy verification, and XGBoost for ML-based approval confidence scoring —
+              reducing manual adjudication time and improving decision consistency.
+            </p>
+          </article>
+          <article class="disease-card">
+            <p class="disease-code">RISK</p>
+            <h3>Risk Scoring &amp; Policy Optimisation</h3>
+            <p>
+              Produces adaptive 0–100 customer risk scores using a weighted feature formula.
+              A PPO reinforcement learning agent proposes per-customer weight adjustments validated
+              by a risk officer. XGBoost expense prediction, SHAP explainability, KMeans segmentation,
+              and RAG-based rider assignment drive downstream policy optimisation.
             </p>
           </article>
           <article class="disease-card">
             <p class="disease-code">BIO</p>
             <h3>Sanctioned Entity Detection</h3>
             <p>
-              Comprehensive sanctioned entity detection using multimodal biometric and identity
-              attribute recognition to prevent fraudulent insurance applications.
-            </p>
-          </article>
-          <article class="disease-card">
-            <p class="disease-code">RISK</p>
-            <h3>Health Risk &amp; Mortality Predictor</h3>
-            <p>
-              AI-driven personal health risk and mortality prediction engine that informs premium
-              calculation and policy eligibility assessments for life insurance products.
+              Dual-track parallel pipeline screens every applicant for sanctions compliance.
+              Track A uses TF-IDF char n-gram, FAISS ANN search, and a Siamese phonetic model for
+              transliteration-robust name matching. Track B uses EfficientNet-B0 face embeddings
+              with O(1) prototype bank cosine similarity. Scores are fused into a single compliance decision.
             </p>
           </article>
           <article class="disease-card">
             <p class="disease-code">XAI</p>
             <h3>Policy Recommender &amp; Conv. AI Agent</h3>
             <p>
-              Explainable, multi-modal policy recommender combined with a conversational AI agent
-              delivering personalised insurance product suggestions with transparent reasoning.
+              XGBoost scores policy suitability across a 31-feature user vector; SHAP TreeExplainer
+              provides per-feature justification; a rule-based gap analyser suggests top-3 riders.
+              ChromaDB MMR retrieval grounds Groq LLaMA 3.3 70B narratives in actual policy clauses.
+              A scope-locked chat agent handles follow-up Q&amp;A with full Supabase session persistence.
             </p>
           </article>
         </div>
@@ -686,10 +695,9 @@
               <img class="team-photo" src="assets/Images/Rashmika%20D.G.C.D.jpeg" alt="Portrait of Rashmika D.G.C.D"
                 onerror="this.parentElement.classList.add('no-photo')" />
             </div>
-            <p class="team-role">Sanction &amp; Identity Detection</p>
+            <p class="team-role">Risk Scoring &amp; Policy Optimisation</p>
             <h3>Rashmika D.G.C.D</h3>
-            <p class="team-desc">Sanctioned Entity Detection Using Multimodal Biometric and Identity Attribute
-              Recognition.</p>
+            <p class="team-desc">Adaptive Risk Scoring and Policy Optimisation Using Reinforcement Learning and Explainable AI.</p>
             <span class="team-email">Reg: IT22369338 &nbsp;·&nbsp; it22369338@my.sliit.lk</span>
           </article>
           <!-- Student 3 -->
@@ -698,10 +706,9 @@
               <img class="team-photo" src="assets/Images/Methyani%20K.A.G.C.jpeg" alt="Portrait of Methyani K.A.G.C"
                 onerror="this.parentElement.classList.add('no-photo')" />
             </div>
-            <p class="team-role">Health Risk &amp; Mortality Predictor</p>
+            <p class="team-role">Sanctioned Entity Detection</p>
             <h3>Methyani K.A.G.C</h3>
-            <p class="team-desc">AI-Driven Personal Health Risk and Mortality Predictor for insurance personalisation.
-            </p>
+            <p class="team-desc">Sanctioned Entity Detection Using Multimodal Biometric and Identity Attribute Recognition.</p>
             <span class="team-email">Reg: IT22330346 &nbsp;·&nbsp; it22330346@my.sliit.lk</span>
           </article>
           <!-- Student 4 -->
@@ -712,8 +719,7 @@
             </div>
             <p class="team-role">Policy Recommender &amp; Conv. AI</p>
             <h3>Mallawaarachchi P.K.</h3>
-            <p class="team-desc">Explainable, Multi-Modal Policy Recommender and Conversational AI Agent for Insurance
-              Personalization.</p>
+            <p class="team-desc">Explainable, Multi-Modal Policy Recommender and Conversational AI Agent for Insurance Personalization.</p>
             <span class="team-email">Reg: IT22088178 &nbsp;·&nbsp; it22088178@my.sliit.lk</span>
           </article>
           <!-- Supervisor -->
